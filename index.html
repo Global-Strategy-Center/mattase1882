@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matasse 1822 | Café in Old Tbilisi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c221e;
+            --accent: #b89768;
+            --bg: #fdfbf7;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--primary); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        /* Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 24px; font-weight: 700; letter-spacing: 1px; color: var(--primary); }
+        .nav-links { display: flex; gap: 20px; list-style: none; font-size: 14px; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero */
+        .hero { 
+            height: 90vh; 
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            color: var(--white); 
+            padding: 0 20px; 
+        }
+        .hero h1 { font-size: 52px; margin-bottom: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        .hero p { font-size: 18px; margin-bottom: 30px; font-weight: 300; max-width: 650px; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+        .btn { display: inline-block; padding: 12px 30px; background: var(--accent); color: var(--white); text-decoration: none; border-radius: 4px; font-weight: 500; transition: background 0.3s; }
+        .btn:hover { background: #9e7f52; }
+
+        /* Section */
+        section { padding: 80px 10%; text-align: center; }
+        section h2 { font-size: 36px; margin-bottom: 20px; color: var(--primary); }
+        .subtitle { color: #666; max-width: 700px; margin: 0 auto 50px auto; font-size: 16px; }
+
+        /* Gallery / Atmosphere */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; text-align: left; margin-top: 40px; }
+        .about-text h3 { font-size: 28px; margin-bottom: 15px; }
+        .about-text p { color: #555; margin-bottom: 20px; }
+        .about-img { width: 100%; height: 350px; border-radius: 8px; background-size: cover; background-position: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+        /* Menu Grid */
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: left; }
+        .menu-item { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .menu-img { height: 220px; background-size: cover; background-position: center; }
+        .menu-content { padding: 20px; }
+        .menu-title-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .menu-title-flex h3 { font-size: 18px; }
+        .price { color: var(--accent); font-weight: 700; }
+        .menu-content p { font-size: 14px; color: #666; }
+
+        /* Footer */
+        footer { background: var(--primary); color: var(--white); padding: 40px 10%; text-align: center; font-size: 14px; }
+        footer p { margin-top: 10px; color: #aaa; }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MATASSE 1822</div>
+        <ul class="nav-links">
+            <li><a href="#about">Atmosphere</a></li>
+            <li><a href="#menu">Sweets & Gifts</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="hero">
+        <h1>Matasse 1822</h1>
+        <p>A magical corner of Old Tbilisi on Verdzoba Street, where history, fine coffee, and sweet moments meet.</p>
+        <a href="#about" class="btn">Discover More</a>
+    </div>
+
+    <section id="about">
+        <h2>The Experience</h2>
+        <p class="subtitle">Step into a timeless atmosphere filled with vintage charm, romantic floral decorations, and cozy corners.</p>
+        
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Historical Charm in Old Tbilisi</h3>
+                <p>Located on Verdzoba Street, Matasse 1822 offers locals and travelers a unique aesthetic escape. Beautiful blue facades, roses, and an inviting interior make every visit unforgettable.</p>
+                <a href="#contact" class="btn">Find Us</a>
+            </div>
+            <!-- ინტერიერის ფოტო -->
+            <div class="about-img" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80');"></div>
+        </div>
+    </section>
+
+    <section id="menu" style="background: #f4f0eb;">
+        <h2>Handmade Sweets & Gifts</h2>
+        <p class="subtitle">Explore our exquisite collection of artisan sweets, souvenirs, and specialty treats.</p>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="menu-img" style="background-image: url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="menu-content">
+                    <div class="menu-title-flex">
+                        <h3>Artisan Cookies & Treats</h3>
+                        <span class="price">₾18</span>
+                    </div>
+                    <p>Delightful handmade biscuits and confections displayed in our vintage vitrines.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-img" style="background-image: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="menu-content">
+                    <div class="menu-title-flex">
+                        <h3>Specialty Coffee & Teas</h3>
+                        <span class="price">₾12</span>
+                    </div>
+                    <p>Enjoy premium coffee and aromatic teas right in the romantic ambiance of Verdzoba St.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-img" style="background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="menu-content">
+                    <div class="menu-title-flex">
+                        <h3>Outdoor Terrace Seating</h3>
+                        <span class="price">Open Daily</span>
+                    </div>
+                    <p>Relax under the blue striped awning surrounded by blooming roses and historic architecture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Visit Matasse 1822</h2>
+        <p class="subtitle">📍 Verdzoba Street (ვერცხლის ქუჩა), Old Tbilisi, Georgia<br>✨ Open every day for coffee, sweets, and wonderful memories.</p>
+        <a href="https://instagram.com" target="_blank" class="btn">Contact via Instagram</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Matasse 1822. All rights reserved.</p>
+        <p>Concept design tailored with real location imagery.</p>
+    </footer>
+
+</body>
+</html>
